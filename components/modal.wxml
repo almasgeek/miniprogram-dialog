@@ -1,0 +1,15 @@
+<view name="dialog" wx:if="{{show}}">
+  <view class="dialog-mask" bindtap="maskClick">
+    <view class="dialog ug" animation="{{animationData}}">
+      <view class="title" wx:if="title">
+        {{title}}
+      </view>
+      <view class="body">
+        <slot name="content"></slot>
+      </view>
+      <view class="footer">
+        <slot name="footer"></slot>
+      </view>
+    </view>
+  </view>
+</view>
